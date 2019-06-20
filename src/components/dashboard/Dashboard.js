@@ -1,9 +1,6 @@
-// Creating as a class-based component because we might use states and lifecycle hooks in the future
 import React, { Component } from 'react'
-
 import BookList from "../book/BookList"
 import CollectionList from "../collection/CollectionList"
-import { connect } from 'react-redux'
 
 class Dashboard extends Component {
     render(){
@@ -25,10 +22,4 @@ class Dashboard extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return{
-        books: state.book.books
-    }
-}
-
-export default connect(mapStateToProps)(Dashboard)
+export default Dashboard

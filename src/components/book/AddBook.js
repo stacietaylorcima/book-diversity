@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { addBook } from '../../store/actions/bookActions'
+import firebase from "../../config/firebase"
 
 class AddBook extends Component {
     state = {
@@ -56,9 +55,5 @@ class AddBook extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        addBook: (book) => dispatch(addBook(book))
-    }
-}
-export default connect(null, mapDispatchToProps)(AddBook) 
+
+export default AddBook

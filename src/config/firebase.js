@@ -1,8 +1,8 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import 'firebase/auth'
+
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const config = {
     apiKey: "AIzaSyAwMoQzIe2eEQ_03fnAiCNToo4TegC854Q",
     authDomain: "book-diversity.firebaseapp.com",
     databaseURL: "https://book-diversity.firebaseio.com",
@@ -11,7 +11,12 @@ var firebaseConfig = {
     messagingSenderId: "130399979688",
     appId: "1:130399979688:web:5b7a5b996cab015c"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
-export default firebase
+let fb = firebase.initializeApp(config);
+
+const Timestamp = fb.firebase_.firestore.Timestamp;
+
+export {
+    fb,
+    Timestamp
+};
