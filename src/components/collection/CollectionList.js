@@ -1,14 +1,14 @@
-import React from 'react'
-import CollectionOverview from './CollectionOverview';
+import React from "react";
+import CollectionOverview from "./CollectionOverview";
 
 const CollectionList = () => {
-    return (
-        <div className="collection-list section">
-            <CollectionOverview />
-            <CollectionOverview />
-            <CollectionOverview />
-        </div>
-    )
-}
+  return (
+    <div className="collection-list section">
+      <CollectionOverview />
+      <CollectionOverview />
+      <CollectionOverview />
+    </div>
+  );
+};
 
-export default CollectionList
+export default CollectionList;
