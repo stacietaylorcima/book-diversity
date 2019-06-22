@@ -1,32 +1,32 @@
 import React from "react";
 import { FirestoreCollection } from "react-firestore";
 
-const BookOverview = ({ book }) => {
+const BookList = ({ book }) => {
   return (
-    <div>
+    <section>
       <FirestoreCollection
         path="books"
         render={({ data }) => {
           return (
-            <div>
-              <ul>
+            <article>
+              <ul className="card z-depth-0 book-overview">
                 {data.map(book => (
-                  <li key={book.id}>{book.title}</li>
+                  <li key={book.id} className="card-content grey-text text-darken-3">
+                    <title className="card-title">{book.title}</title>
+                    <p>{book.imageURL}</p>
+                    <p>by {book.author}</p>
+                    <p> {book.synopsis}</p>
+                    <p>{book.bookURL}</p>
+                    <p>{book.fiction}</p>
+                  </li>
                 ))}
-              </ul>
-            </div>
+                </ul>
+            </article>
           );
         }}
       />
-    </div>
-    // <div className="card z-depth-0 book-overview">
-    //     <div className="card-content grey-text text-darken-3">
-    //         <span className="card-title">{book.title}}</span>
-    //         <p>by {book.author}}</p>
-    //         <img src="https://d.gr-assets.com/books/1403534691l/20685495.jpg" alt="book cover"></img>
-    //     </div>
-    // </div>
+    </section>
   );
 };
 
-export default BookOverview;
+export default BookList;

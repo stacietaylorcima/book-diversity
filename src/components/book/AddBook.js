@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import firebase from "../../config/firebase"
 
 class AddBook extends Component {
     state = {
