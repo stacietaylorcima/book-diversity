@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const config = {
   apiKey: "AIzaSyAwMoQzIe2eEQ_03fnAiCNToo4TegC854Q",
   authDomain: "book-diversity.firebaseapp.com",
@@ -14,6 +14,4 @@ const config = {
 
 let fb = firebase.initializeApp(config);
 
-const Timestamp = fb.firebase_.firestore.Timestamp;
-
-export { fb, Timestamp };
+export default firebase; 

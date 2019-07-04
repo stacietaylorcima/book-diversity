@@ -9,7 +9,7 @@ import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import AddBook from "./components/book/AddBook";
 
-// Status Report: I think that I need to be connecting to FirestoreCollection and/or Firestore Document at this level
+// Status Report Books to Firebase: I think that I need to be connecting to FirestoreCollection and/or Firestore Document at this level
 // and then passing that data down the line all the way to my BookDetails component. Data is currently being pulled into
 // Booklist, which is like App>Dashboard>Booklist. BookDetails and AddBook don't seem to need to be nested into any other
 // componenet so I'm not sure how to best get data over to those components.
